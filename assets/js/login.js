@@ -60,6 +60,8 @@ $(function() {
                     return layer.msg('登录失败')
                 }
                 layer.msg('登录成功！')
+                // 将登录成功的得到的token字符串，保存到localStorage中
+                localStorage.setItem('token',res.token)
                 // console.log(res.token)
                 // 跳转到后台主页
                 location.href = '/index.html'
